@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="weather-container">
+    <h1>Weather App</h1>
+    
+    <!-- Input for user to enter a city name -->
+    <div class="input-section">
+      <label for="location">Enter City Name:</label>
+      <input type="text" id="location" placeholder="e.g., New York" />
+      <button onclick="getWeatherByCity()">Get Weather</button>
+    </div>
+    
+    <!-- Display current weather information -->
+    <div id="weather-info" class="weather-info">
+      <p id="location-name" class="weather-text"></p>
+      <p id="temperature" class="weather-text"></p>
+      <p id="description" class="weather-text"></p>
+      <p id="humidity" class="weather-text"></p>
+      <p id="wind-speed" class="weather-text"></p>
+    </div>
+
+    <!-- Button to get weather based on user's geolocation -->
+    <div class="location-button">
+      <button onclick="getWeatherByGeoLocation()">Use My Location</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
